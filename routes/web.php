@@ -23,3 +23,4 @@ Route::get('/home', [PagesController::class,'home']);
 Route::get('/student', [PagesController::class,'student']);
 Route::get('/help', [PagesController::class,'help']);
 Route::get('/student/update', [PagesController::class,'updateData']);
+
