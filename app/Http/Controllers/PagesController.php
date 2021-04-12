@@ -22,4 +22,8 @@ class PagesController extends Controller
     {
         return view('help');
     }
+    public function updateData()
+    {
+        return view('updatedata');
+    }
 }
