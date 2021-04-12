@@ -19,14 +19,26 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="/home">Home</a>
-            <a class="nav-link" href="/student">Student</a>
+            <a class="nav-link"  href="/home">Home</a>
+            <a class="nav-link active" aria-current="page"  href="/student">Student</a>
             <a class="nav-link" href="/help">Help</a>
         </div>
         </div>
     </div>
     </nav>
-    <h1 style="text-align:center;">Welcome to datakita.com</h1>
-    
+    <h1 style="text-align:center;">Welcome to student Data Management</h1>
+    <div class="box-body">
+        <table class="table table-hover">
+            <thead>
+                <th>NIM</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Major</th>
+                <th>Handphone</th>
+                <th>Address</th>
+                <th>Action</th>
+            </thead>
+        </table>
+    </div>   
 </body>
 </html>

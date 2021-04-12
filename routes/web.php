@@ -18,4 +18,7 @@ Route::get('/', function () {
 });
 
 */
-Route::get('/', [PagesController::class,'home']);
+Route::get('/', [PagesController::class,'welcome']);
+Route::get('/home', [PagesController::class,'home']);
+Route::get('/student', [PagesController::class,'student']);
+Route::get('/help', [PagesController::class,'help']);
