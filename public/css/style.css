@@ -8,3 +8,13 @@ body {
     font-weight: 400;
     line-height: 1.9;
 }
+.insert-data {
+    border: solid;
+    border-radius: 1rem;
+    background: #132b4f;
+    min-height: 850px;
+    padding: 5%;
+    color: white;
+    position: absolute;
+    margin: 0 auto;
+}

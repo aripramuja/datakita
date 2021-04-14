@@ -27,37 +27,22 @@
     </div>
     </nav>
     <h1 style="text-align:center;">Welcome to student Data Management</h1>
-    <div class="box-body">
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <a class="btn btn-primary" href="/student/insert">Insert</a>
-            <button class="btn btn-primary" type="button">Cetak</button>
+    <div class="card" style="width: 30rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{$data_student-> name}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{$data_student-> nim}}</h6>
+            <p class="card-text">{{$data_student-> email}}</p>
+            <p class="card-text">{{$data_student-> major}}</p>
+            <p class="card-text">{{$data_student-> handphone}}</p>
+            <p class="card-text">{{$data_student-> address}}</p>
+            <a href="{{$data_student->id}}/edit" class="btn btn-primary">Edit</a>
+            <form action="{{$data_student->id}}" method="POST" class="d-inline">
+                @method('delete')
+                @csrf
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+            <a href="/student" class="card-link">Back</a>
         </div>
-        <table class="table table-hover">
-            <thead>
-                <th>NIM</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Major</th>
-                <th>Handphone</th>
-                <th>Address</th>
-                <th>Action</th>
-            </thead>
-            <tbody>
-                @foreach ($student as $student)
-                    <tr>
-                        <td> {{ $student -> nim}}</td>
-                        <td> {{ $student -> name}}</td>
-                        <td> {{ $student -> email}}</td>
-                        <td> {{ $student -> major}}</td>
-                        <td> {{ $student -> handphone}}</td>
-                        <td> {{ $student -> address}}</td>
-                        <td>
-                            <a href="/student/{{ $student->id }}" class="badge bg-info text-dark">Detail</a>
-                        </td>
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
-    </div>   
+    </div>
 </body>
 </html>

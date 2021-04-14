@@ -12,22 +12,23 @@
 </head>
 <body>
             <div class="insert-data">
-                <h5 style="text-align:center">Insert Data</h5>
+                <h5 style="text-align:center">Edit Data</h5>
                 <p style="text-align:center"> <i>E-Recrutment Form </i> </p>
-                <form action="/student/insert" method="POST" enctype="multipart/form-data">
+                <form action="/student/{{$data_student->id}}" method="POST" enctype="multipart/form-data">
+                    @method('patch')
                     @csrf
                     <div class="mb-3">
                         <label for="exampleInputNIM" class="form-label">NIM</label>
-                        <input type="text" name="nim" placeholder="Your NIM . . ." maxlength="10" class="form-control" id="exampleInputNIM" required>
+                        <input type="text" name="nim" placeholder="Your NIM . . ." maxlength="10" class="form-control" id="exampleInputNIM" value="{{$data_student->nim}}" required>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputName" class="form-label">Name</label>
-                        <input type="text" name="name" placeholder="Your Name . . ." maxlength="50" class="form-control" id="exampleInputName" aria-describedby="nameHelp" required>
+                        <input type="text" name="name" placeholder="Your Name . . ." maxlength="50" class="form-control" id="exampleInputName" aria-describedby="nameHelp" value="{{$data_student->name}}" required>
                         <div id="nameHelp" class="form-text">Write your full name</div>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" name="email" placeholder="Your Email . . ." class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                        <input type="email" name="email" placeholder="Your Email . . ." class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$data_student->email}}" required>
                         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                     </div>
                     <div class="mb-3">
@@ -43,14 +44,14 @@
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputHandphone" class="form-label">No.Handphone</label>
-                        <input type="text" name="handphone" placeholder="No. Phone . . ." maxlength="14" class="form-control" id="exampleInputHandphone" required>
+                        <input type="text" name="handphone" placeholder="No. Phone . . ." maxlength="14" class="form-control" id="exampleInputHandphone" value="{{$data_student->handphone}}" required>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputAddress" class="form-label">Address</label>
-                        <input type="text" name="address" placeholder="Address . . ." maxlength="250"  class="form-control" id="exampleInputAddress" required>
+                        <input type="text" name="address" placeholder="Address . . ." maxlength="250"  class="form-control" id="exampleInputAddress" value="{{$data_student->address}}" required>
                     </div>
                     <div class="card-footer d-grid gap-2">
-                        <button class="btn btn-primary" type="submit">Submit form</button>
+                        <button class="btn btn-primary" type="submit">Save</button>
                     </div>
                 </form>
             </div>
