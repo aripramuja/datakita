@@ -28,6 +28,10 @@
     </nav>
     <h1 style="text-align:center;">Welcome to student Data Management</h1>
     <div class="box-body">
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <a class="btn btn-primary" href="/student/insert">Insert</a>
+            <button class="btn btn-primary" type="button">Cetak</button>
+        </div>
         <table class="table table-hover">
             <thead>
                 <th>NIM</th>
@@ -38,6 +42,21 @@
                 <th>Address</th>
                 <th>Action</th>
             </thead>
+            <tbody>
+                @foreach ($student as $student)
+                    <tr>
+                        <td> {{ $student -> nim}}</td>
+                        <td> {{ $student -> name}}</td>
+                        <td> {{ $student -> email}}</td>
+                        <td> {{ $student -> major}}</td>
+                        <td> {{ $student -> handphone}}</td>
+                        <td> {{ $student -> address}}</td>
+                        <td>
+                            <a href="/student/{{ $student->id }}" class="badge bg-info text-dark">Detail</a>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
         </table>
     </div>   
 </body>
