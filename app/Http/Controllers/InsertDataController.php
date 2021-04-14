@@ -17,6 +17,6 @@ class InsertDataController extends Controller
         $data_student->handphone=$req->handphone;
         $data_student->address=$req->address;
         $data_student->save();
-        return redirect('/home');
+        return redirect('/student');
     }
 }

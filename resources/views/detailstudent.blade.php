@@ -41,7 +41,7 @@
                 @csrf
                 <button type="submit" class="btn btn-danger">Delete</button>
             </form>
-            <a href="/student" class="card-link">Back</a>
+            <a href="/student" class="btn btn-primary">Back</a>
         </div>
     </div>
 </body>
