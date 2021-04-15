@@ -14,6 +14,7 @@
             <div class="insert-data">
                 <h5 style="text-align:center">Edit Data</h5>
                 <p style="text-align:center">E-Recrutment Form </p>
+
                 <form action="/student/{{$data_student->id}}" method="POST" enctype="multipart/form-data">
                     @method('patch')
                     @csrf
