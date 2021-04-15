@@ -13,7 +13,7 @@
 <body>
             <div class="insert-data">
                 <h5 style="text-align:center">Insert Data</h5>
-                <p style="text-align:center"> <i>E-Recrutment Form </i> </p>
+                <p style="text-align:center">E-Recrutment Form</p>
                 <form action="/student/insert" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
