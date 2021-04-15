@@ -32,15 +32,15 @@
             <a class="btn btn-primary" href="/student/insert">Insert</a>
             <button class="btn btn-primary" type="button">Cetak</button>
         </div>
-        <table class="table table-hover">
+        <table class="table table-hover" aria-describedby="student">
             <thead>
-                <th>NIM</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Major</th>
-                <th>Handphone</th>
-                <th>Address</th>
-                <th>Action</th>
+                <th id="nim">NIM</th>
+                <th id="name">Name</th>
+                <th id="email">Email</th>
+                <th id="major">Major</th>
+                <th id="handphone">Handphone</th>
+                <th id="address">Address</th>
+                <th id="action">Action</th>
             </thead>
             <tbody>
                 @foreach ($student as $student)
