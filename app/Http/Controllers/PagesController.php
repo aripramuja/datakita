@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\data_student;
+use Dompdf\Dompdf;
 class PagesController extends Controller
 {
     public function welcome()
@@ -58,5 +59,10 @@ class PagesController extends Controller
                         'address'=>$req->address,
                     ]);
          return redirect('/student');
+    }
+    public function print()
+    {
+        $student = data_student::all();
+        return view('print', ['student' => $student]);
     }
 }

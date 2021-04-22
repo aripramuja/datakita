@@ -22,6 +22,7 @@ Route::get('/', function () {
 Route::get('/', [PagesController::class,'welcome']);
 Route::get('/home', [PagesController::class,'home']);
 Route::get('/student', [PagesController::class,'student']);
+Route::get('/student/print', [PagesController::class,'print']);
 Route::get('/help', [PagesController::class,'help']);
 Route::get('/student/update', [PagesController::class,'updateData']);
 Route::get('/student/insert', [PagesController::class,'insertData']);

@@ -30,7 +30,7 @@
     <div class="box-body">
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
             <a class="btn btn-primary" href="/student/insert">Insert</a>
-            <button class="btn btn-primary" type="button">Cetak</button>
+            <a class="btn btn-primary" target="_blank" href="/student/print">Print</a>
         </div>
         <table class="table table-hover" aria-describedby="student">
             <thead>
