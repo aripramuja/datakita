@@ -13,12 +13,6 @@ use App\Http\Controllers\InsertDataController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-/*
-Route::get('/', function () {
-    return view('home');
-});
-
-*/
 Route::get('/', [PagesController::class,'welcome']);
 Route::get('/home', [PagesController::class,'home']);
 Route::get('/student', [PagesController::class,'student']);

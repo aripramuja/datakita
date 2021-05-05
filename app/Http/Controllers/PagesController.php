@@ -18,7 +18,6 @@ class PagesController extends Controller
     }
     public function student()
     {
-        //$student = DB::table('data_students')->get();
         $student = data_student::all();
         return view('student', ['student' => $student]);
     }
@@ -35,20 +34,16 @@ class PagesController extends Controller
         return view('insertdata');
     }
     public function show(data_student $data_student){
-        //
         return view('detailstudent', compact('data_student'));
     }
     public function destroy(data_student $data_student){
-        //
         data_student::destroy($data_student->id);
         return redirect('/student');
     }
     public function edit(data_student $data_student){
-        //
         return view('edit', compact('data_student'));
     }
     public function update(Request $req, data_student $data_student){
-        //
         data_student::where('id', $data_student->id)
                     ->update([
                         'nim'=>$req->nim,

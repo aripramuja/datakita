@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </head>
 <body>
-            <div class="insert-data">
+            <div class="insert-data d-grid gap-2 col-6 mx-auto">
                 <h5 style="text-align:center">Insert Data</h5>
                 <p style="text-align:center">E-Recrutment Form</p>
                 <form action="/student/insert" method="POST" enctype="multipart/form-data">
